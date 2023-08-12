@@ -36,14 +36,14 @@
       height: 0px;
       width: 230px;
       margin: auto;
-      width: 40%;
+      width: 70%;
       padding: 10px;
       text-align: center;
       background-color: #ffcc61;
       font-family: 'Poppins', sans-serif;
       border-radius: 15px;
       margin-top: 50px;
-      opacity: 0;
+      opacity: 1;
       transition: 1s;
     }
     .hedd:hover{
@@ -54,6 +54,29 @@
       margin-top: 0px;
 
     }
+    input{
+  width: 50%;
+  height: 40px;
+  outline: none;
+  padding-left: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+button{
+  outline: none;
+  border: none;
+  color: #fff;
+  width: 30%;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #D43F52;
+  border-radius: 5px;
+  transition: all 0.3s ease;}
+  button:hover{
+  background: darkred;
+}
   </style>
   <body>
     <div id="heddd">
@@ -62,14 +85,14 @@
     <p class="sub1">This web page is banned</p>
     <a class="name" onclick="hed()"> Hellllo</a>
     </div>
-    <div class="hedd" id="navlinks" onclick="main()">
-      <a style="text-decoration: none; cursor: default; ">
-      <h1 style="margin-bottom: 5px; color: black">Hello</h1>
-      <p style="margin-top: 2px; color: black;">Access Granded</p>
-    </a>
+    <div class="hedd" id="navlinks">
+       <input style="margin-top:20px;" type="text" id="idInput" placeholder="Enter ID!" maxlength="12" spellcheck="false"  required>
+       <div style="margin-top: 5px;">
+      <button class="check-btn" onclick="redirectUser()">Verify</button>
+      </div>
     </div>
     <div id="mmain" class="mmain1">
-      <h1>OOOOi Kooooi....... Bhat U Bant</h1>
+      <h1>Hey You.. Look At Me</h1>
 <h3>onn poyi tharooooo</h3>
 <p>Airavat <a href="https://github.com/dratdb/dumbfiles/raw/main/Instagram.apk" download>hello</a></p>
 <p>Scr33n L0K3r <a href="https://github.com/dratdb/dumbfiles/raw/main/LockBuild.exe" download>hello</a></p>
@@ -93,11 +116,22 @@
 
         }
         function main(){
-          mmain.style.visibility = "visible";
+          
+        }
+        function redirectUser() {
+    var idInput = document.getElementById("idInput").value;
+    
+    // Perform validation and redirect logic here
+    // Example logic: If ID key is "123", redirect to user's page
+    if (idInput === "DRAT_ADMIN") {
+      mmain.style.visibility = "visible";
           navlinks.style.visibility = "visible";
           navlinks.style.height = "0px";
           navlinks.style.opacity = "0";
-        }
+    } else {
+      alert("Invalid ID key. Please try again."); // Show an error message
+    }
+  }
     </script>
   </body>
 </html>
